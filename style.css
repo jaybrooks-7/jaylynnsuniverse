@@ -1,0 +1,526 @@
+:root {
+  --variable-name: value;
+}
+
+selector {
+  property: var(--variable-name);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "cardo", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #1c1a00; /* change primary color */
+  --secondary-color: #c86128;
+  --tertiary-color: #faa21b;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  /* --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem; */
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+body {
+font-family: 'Cardo', serif;
+}
+h2, h3, footer {
+font-family: 'Oswald', sans-serif;
+text-transform: uppercase;
+}
+/* Variables end */
+
+body, html {
+    height: 100%;
+}
+h1 {
+  font-size: 30px;
+  color: var(--secondary-color);
+}
+h2{
+  color:
+}
+html {
+  scroll-behavior: smooth;
+}
+h4 {
+  font-size: 100px;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Navbar Styling */
+nav {
+  position: sticky;  /* navbar sticks at top */
+  top: 0;
+  left: 0;
+  z-index: 1; /* navbar displays over any element on page */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav h1 {
+  color: var(--secondary-color);
+  font-family: 'Rampart One', cursive;
+
+}
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--tertiary-color);
+  border-bottom: 2px solid var(--tertiary-color);
+}
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+ /* Burger Menu Styling */
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none; /* hides burger menu */
+}
+
+/* Hero Section Styling */
+.hero-img{
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("tropical.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-title {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+  position: relative; /* Make "Welcome" on top */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+}
+
+.hero-text { /* Includes Collaborate CTA */
+  line-height: var(--line-height);
+  padding: 0.4rem;
+  float: left;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #313131;
+}
+
+.hero-h2 {
+  padding-top: 50px;
+  margin-top: 30px;
+}
+.collaborate {
+  margin-top: 30px;
+}
+
+/* About Section styling */
+.about {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+  width: 25rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.about img {
+  width: 500px;
+  height: 500px;
+}
+.about-text {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 6px;
+  display: flex;
+  background: none;
+  box-shadow: 2px 2px 2px 4px var(--primary-shadow);
+}
+.about h2 {
+  margin-bottom: var(--bottom-margin);
+}
+.Contact-me{
+  margin-top: 15px;
+}
+
+/* Skills Section Styling */
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.skill-header {
+  margin-bottom: 1rem;
+}
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Services Section Styling */
+.services{
+  display: grid;
+  grid-template-columns: [first]15% [two]15% [last]15%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.services1 {
+  grid-column-start:1
+  padding-left: 10px;
+  margin-left: 30px;
+}
+.services2 {
+  grid-column-start:2
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.services3 {
+  grid-column-start:3
+  padding-left: 20px;
+  padding-right: -10px;
+  margin-left: 30px;
+  margin-right: -10px;
+}
+
+/* Project Section Styling */
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0px;
+  margin-top: 2rem;
+}
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: [first]30% [two]30% [last]30%;
+  align-items: center;
+  justify-content: center;
+}
+.project-card1 {
+  grid-column-start:1
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 10px;
+  margin: 10px;
+}
+.project-card2 {
+  grid-column-start:2
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 10px;
+  margin: 10px;
+}
+.project-card3 {
+  grid-column-start:3
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 10px;
+  margin: 10px;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container p {
+  padding: 2rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: 5px;
+}
+
+/* Contact Section Styling*/
+.contact-form {
+  text-align: center;
+}
+
+form {
+  width: 450px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 30px;
+  display: inline-block;
+}
+.contact-p, .contact-h3{
+  margin-bottom: 10px;
+}
+input, textarea {
+  border: 1px solid #BF6D50;
+  width: 400px;
+  margin-bottom: 10px;
+}
+input {
+  height: 20px;
+}
+textarea {
+  height: 100px;
+}
+button {
+  background: #809b3c;
+  border: none;
+  padding: 10px 40px;
+  font-size: 16px;
+}
+button a:hover {
+  color: var(--tertiary-color);
+  border-bottom: 2px solid var(--tertiary-color);
+  cursor: pointer;
+}
+
+/* Social Icons Setup */
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 2rem;
+  height: 2rem;
+}
+
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* Scroll to top Styling */
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+
+/* html, body{
+  height: 100%;
+}
+
+body {
+  background:lavender;
+  padding:10;
+  margin:10;
+  color:#5A271C;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(images/blue-marble.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: auto;
+}
+
+/* This is the class to change background for 1 page */
+/* .background {
+  background-image: url(images/blue-marble.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: auto;
+} */
+
+/* h1 {
+  color:darkblue;
+  font-family: 'Rampart One', cursive;
+  font-size: 48px;
+  text-align: center;
+}
+h2 {
+  color:darkgreen;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 24px;
+}
+h3 {
+} */
+
+/* footer {
+  font-style:bold;
+  background: white;
+  text-align: center;
+  padding: 1px;
+}
+
+nav {
+  font-style:bold;
+  background: white;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a {
+  color:#FB360B;
+  text-decoration: none;
+}
+header h1, h2 {
+  font-size: 30px;
+  margin: 0;
+}
+blockquote {
+  padding-left: 20px;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 30px;
+}
+.welcome-img {
+  max-width: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.wireframes-img {
+  border: 2px dashed red;
+} */
+
+/* This is the bird image */
+/* svg {
+  display:block;
+  max-width: 500px;
+}
+
+.beak {
+  opacity: 0;
+  transition: .5s;
+}
+
+.sun-shine {
+  opacity:0;
+  transition: 1s;
+}
+
+svg:hover .sun-shine {
+  opacity:1;
+  transition:2s
+}
+
+svg:hover .beak {
+  opacity:1;
+}
+
+/* contact me CTA on index- hover state not working */
+/* If all buttons will look the same, don't need class */
+/* .contact-me {
+  button: hover {
+  background: yellow;
+  }
+}
+.Full-project-1{
+  button: hover{
+  background: yellow;
+  }
+}
+.Collaborate{
+  button: hover{
+  background: yellow;
+  }
+} */
+
+
+/* FOOTER STYLES
+-----------------------------------------*/
+/* Sticky Footer - http://css-tricks.com/snippets/css/sticky-footer */
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -55px; /* must be the same height as footer */
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+footer,
+.page-wrap:after {
+  height: 55px; /* however tall you want the footer to be */
+  color: blue;
+}
