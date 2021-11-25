@@ -8,18 +8,20 @@ selector {
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
+
 /* Variables */
 :root {
-  --font-family: "cardo", sans-serf;
+  /* --font-family: "cardo", sans-serf; */
+  /* --font-family: "Rampart One," cursive; */
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #fcfcfc;
-  --primary-color: #1c1a00; /* change primary color */
-  --secondary-color: #c86128;
-  --tertiary-color: #faa21b;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #a17a69;
+  --bg-color: #fcfcfc; /* background color- white */
+  --primary-color: #1c1a00; /* black */
+  --secondary-color: #c86128; /* dark orange */
+  --tertiary-color: #faa21b; /* yellow orange */
+  --primary-shadow: #8b8eaf; /* greyish blue */
+  --secondary-shadow: #bf6741; /* orange */
   /* --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem; */
   --line-height: 1.7rem;
@@ -27,7 +29,7 @@ selector {
 }
 
 body {
-font-family: 'Cardo', serif;
+font-family: 'Cardo', sans-serif;
 }
 h2, h3, footer {
 font-family: 'Oswald', sans-serif;
@@ -37,10 +39,6 @@ text-transform: uppercase;
 
 body, html {
     height: 100%;
-}
-h1 {
-  font-size: 30px;
-  color: var(--secondary-color);
 }
 h2{
   color:
@@ -83,16 +81,25 @@ nav {
   left: 0;
   z-index: 1; /* navbar displays over any element on page */
   display: flex;
+  /* grid-template-rows: [first]30% [two]30% [last]30%; */
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
-nav h1 {
+navigation {
+}
+
+logo {
+  width: 50%;
+  height: auto;
+  padding-right: 29px;
+}
+h1 {
+  font-size: 30px;
   color: var(--secondary-color);
   font-family: 'Rampart One', cursive;
-
 }
 nav a {
   color: var(--primary-color);
@@ -109,6 +116,7 @@ nav ul {
 nav ul li {
   font-weight: var(--bold-font);
 }
+
 
  /* Burger Menu Styling */
 .burger-menu {
@@ -129,6 +137,7 @@ nav ul li {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
 }
 
 .hero-title {
@@ -145,7 +154,7 @@ nav ul li {
 .hero-text { /* Includes Collaborate CTA */
   line-height: var(--line-height);
   padding: 0.4rem;
-  float: left;
+  float: bottom;
   text-align: left;
   position: absolute;
   top: 50%;
@@ -185,7 +194,7 @@ nav ul li {
   border-radius: 6px;
   display: flex;
   background: none;
-  box-shadow: 2px 2px 2px 4px var(--primary-shadow);
+  box-shadow: 2px 2px 2px 4px var(--secondary-shadow);
 }
 .about h2 {
   margin-bottom: var(--bottom-margin);
@@ -220,7 +229,39 @@ nav ul li {
 }
 
 /* Services Section Styling */
-.services{
+.table-format {
+    justify-content: center;
+}
+
+td {
+    border: 2px solid #333;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    /* width: 100%; */
+    /* width: 400px; */
+    height: 240px;
+    margin: 0 auto;
+}
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+table {
+    width: 400%;
+    max-width: 500px;
+    height: 240px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+/* .services{
   display: grid;
   grid-template-columns: [first]15% [two]15% [last]15%;
   align-items: center;
@@ -247,7 +288,7 @@ nav ul li {
   padding-right: -10px;
   margin-left: 30px;
   margin-right: -10px;
-}
+} */
 
 /* Project Section Styling */
 .projects {
@@ -315,8 +356,8 @@ nav ul li {
 form {
   width: 450px;
   background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
+  border-radius: 2px;
+  box-shadow: -1px 10px 10px 3px var(--secondary-shadow);
   padding: 20px;
   margin: 30px;
   display: inline-block;
@@ -368,144 +409,6 @@ footer {
   margin: 2rem 0 0;
 }
 
-/* Scroll to top Styling */
-
-.scroll-up {
-  position: fixed;
-  right: 0.5%;
-  bottom: 3%;
-  cursor: pointer;
-}
-
-.up-arrow {
-  width: 3rem;
-  height: 3rem;
-}
-
-
-/* html, body{
-  height: 100%;
-}
-
-body {
-  background:lavender;
-  padding:10;
-  margin:10;
-  color:#5A271C;
-  font-family: 'Open Sans', sans-serif;
-  background-image: url(images/blue-marble.jpg);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: auto;
-}
-
-/* This is the class to change background for 1 page */
-/* .background {
-  background-image: url(images/blue-marble.jpg);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: auto;
-} */
-
-/* h1 {
-  color:darkblue;
-  font-family: 'Rampart One', cursive;
-  font-size: 48px;
-  text-align: center;
-}
-h2 {
-  color:darkgreen;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 24px;
-}
-h3 {
-} */
-
-/* footer {
-  font-style:bold;
-  background: white;
-  text-align: center;
-  padding: 1px;
-}
-
-nav {
-  font-style:bold;
-  background: white;
-  text-align: center;
-  padding: 10px;
-}
-
-nav a {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-a {
-  color:#FB360B;
-  text-decoration: none;
-}
-header h1, h2 {
-  font-size: 30px;
-  margin: 0;
-}
-blockquote {
-  padding-left: 20px;
-  text-align: center;
-  font-family: 'Open Sans';
-  font-size: 30px;
-}
-.welcome-img {
-  max-width: 400px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-}
-.wireframes-img {
-  border: 2px dashed red;
-} */
-
-/* This is the bird image */
-/* svg {
-  display:block;
-  max-width: 500px;
-}
-
-.beak {
-  opacity: 0;
-  transition: .5s;
-}
-
-.sun-shine {
-  opacity:0;
-  transition: 1s;
-}
-
-svg:hover .sun-shine {
-  opacity:1;
-  transition:2s
-}
-
-svg:hover .beak {
-  opacity:1;
-}
-
-/* contact me CTA on index- hover state not working */
-/* If all buttons will look the same, don't need class */
-/* .contact-me {
-  button: hover {
-  background: yellow;
-  }
-}
-.Full-project-1{
-  button: hover{
-  background: yellow;
-  }
-}
-.Collaborate{
-  button: hover{
-  background: yellow;
-  }
-} */
 
 
 /* FOOTER STYLES

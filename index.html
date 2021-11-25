@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+    </style>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/pineapple-clipart.png" type="image">
@@ -32,7 +35,13 @@
 
     <!--  Navbar -->
       <nav>
-        <h1 class="nav-h1">Welcome to my universe</h1>
+        <h1>Welcome to my universe</h1>
+
+        <div class="logo">
+        <img src="images/JB-Logo-16px.png" alt"Jaylynn-Brooks-Logo"/>
+        </div>
+
+
         <ul class="navigation">
           <li> <a href="#about" class="nav-link">About</a> </li>
           <li> <a href="#skills" class="nav-link">Skills</a> </li>
@@ -40,6 +49,7 @@
           <li> <a href="#projects" class="nav-link">Projects</a> </li>
           <li> <a href="#contact" class="nav-link">Contact</a> </li>
         </ul>
+
         <button class="burger-menu" id="burger-menu">
           <ion-icon class="bars" name="menu-outline"></ion-icon>
         </button>
@@ -76,22 +86,22 @@
 
           <div class="skills-wrapper">
             <!-- shaker effect <div class="first-set animate__animated animate__pulse"> -->
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="html"
-              loading="lazy"class="icon icon-card"/>
-
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
+              alt="html"
+              loading="lazy"
+              class="icon icon-card"/>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
-                alt="css"
-                loading="lazy"
-                class="icon icon-card"
-              />
+              alt="css"
+              loading="lazy"
+              class="icon icon-card"/>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                alt="figma"
-                loading="lazy"
-                class="icon icon-card"
-              />
-            </div>
+              alt="figma"
+              loading="lazy"
+              class="icon icon-card"/>
+          </div>
 
             <!-- shaker effect <div class="second-set animate__animated animate__pulse"> -->
+          <div class="skills-wrapper">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-line.svg"
                 alt="adobe-xd"
                 loading="lazy"
@@ -112,10 +122,43 @@
         </section>
 
     <!-- Services Section -->
+    <table>
+        <thead>
+            <tr>
+                <!-- <th colspan="2">All Available Services</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-content1">
+                  <h2>Web Design Services:</h2>
+                  <li>Web Design & Development</li>
+                  <li>Graphic Design</li>
+                  <li>Wordpress</li>
+                  <li>SEO</li>
+                </td>
 
-      <!-- In a grid of 3 -->
-    <section class="services" id="services">
-      <table>
+                <td class="table-content2">
+                  <h2>UX Design Services:</h2>
+                  <li>User Research</li>
+                  <li>Wireframining</li>
+                  <li>Prototyping</li>
+                  <li>UI Design</li>
+                </td>
+
+                <td class="table-content3">
+                  <h2>Marketing Services:</h2>
+                  <li>Market Research</li>
+                  <li>Social Media Management</li>
+                  <li>Branding</li>
+                  <li>Content Creation</li>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <section class="services" id="services">
+
       <div class="services1">
         <h2>Web Design Services:</h2>
         <li>Web Design & Development</li>
@@ -142,7 +185,7 @@
         <li>Content Creation</li>
       </div>
       </table>
-</section>
+</section> -->
 
     <!-- About Section -->
       <!-- Insert profile image to left -->
@@ -270,14 +313,6 @@
         <a href="#" target="_blank">
           <img src="icons/icons8-github.png" alt="Github" class="socicon"/></a>
     </div>
-
-  <!-- Scroll to top -->
-    <i class="scroll-up" id="scroll-up"
-        ><img
-          src="icons/icons8-chevron_up.png"
-          class="socicon up-arrow"
-          alt="scroll-up"/>
-    </i>
 
 
   <!-- Footer Section -->
